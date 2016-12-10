@@ -1,0 +1,103 @@
+/*
+Theme Name:   	Storefront Child Examples
+Theme URI:    	https://github.com/swoboda/storefront-child-examples
+Author:       	Maciej Swoboda
+Author URI:     https://www.wpdesk.net/
+Template:     	storefront
+Description:  	This is a blank child theme for WooThemes StoreFront theme
+Version:      	1.0
+License:      	GNU General Public License v3 or later
+License URI:  	http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain:  	storefront
+Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+Storefront is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+FontAwesome License: SIL Open Font License - http://scripts.sil.org/OFL
+Images License: GNU General Public License v3 or later
+*/
+/*
+ * Add your own custom css below this text.
+ */
+
+/**
+ * Zadanie 1 - Jak dodać obrazek do nagłówka i dostosować tytuł
+ *
+ */
+.site-header {
+    background-image: url('assets/images/bg.jpg') !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.site-branding .site-title {
+    font-size: 3em;
+}
+
+.site-branding .site-title a {
+    color: #fff;
+}
+
+/**
+ * Zadanie 2 - Jak zmodyfikować kolory przycisków
+ *
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.added_to_cart,
+.widget a.button,
+.site-header-cart
+.widget_shopping_cart a.button {
+    background-color: #4d1300;
+    border-color: #4d1300;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.button:hover,
+.added_to_cart:hover,
+.widget a.button:hover,
+.site-header-cart
+.widget_shopping_cart a.button:hover {
+    background-color: #973816;
+}
+
+/**
+ * Zadanie 3 - Jak zmodyfikować stronę produktu (dla każdego produktu i tylko wybranego)
+ *
+ */
+.single-product .product_title {
+    color: #973816;
+    font-size: 3em;
+}
+
+.single-product .summary p {
+    color: #4d1300;
+    font-style: italic;
+}
+
+.single-product #product-70 .product_title {
+    font-family: Georgia, serif;
+    font-size: 2em;
+}
+
+/**
+ * Zadanie 4 - Jak zmienić widok zamówienia z dwóch na jedną kolumnę
+ *
+ */
+.woocommerce-checkout .col2-set,
+.woocommerce-checkout #order_review,
+.woocommerce-checkout #order_review_heading {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+}
