@@ -22,12 +22,16 @@ Images License: GNU General Public License v3 or later
 /*
  * Add your own custom css below this text.
  */
+.site-header .site-branding {
+    width: auto;
+}
+
 
 /**
- * Zadanie 1 - Jak dodać obrazek do nagłówka i dostosować tytuł
+ * Task 1 - Add header image and adjust site title
  *
  */
-.site-header {
+/*.site-header {
     background-image: url('assets/images/bg.jpg') !important;
     background-position: center center;
     background-repeat: no-repeat;
@@ -40,13 +44,13 @@ Images License: GNU General Public License v3 or later
 
 .site-branding .site-title a {
     color: #fff;
-}
+}*/
 
 /**
- * Zadanie 2 - Jak zmodyfikować kolory przycisków
+ * Task 2 - Change buttons colour
  *
  */
-button,
+/*button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
@@ -69,35 +73,37 @@ input[type="submit"]:hover,
 .site-header-cart
 .widget_shopping_cart a.button:hover {
     background-color: #973816;
-}
+}*/
 
 /**
- * Zadanie 3 - Jak zmodyfikować stronę produktu (dla każdego produktu i tylko wybranego)
+ * Task 3 - Tweak product page (all products or just selected)
  *
  */
-.single-product .product_title {
+/*.single-product .product_title {
     color: #973816;
     font-size: 3em;
+    font-weight: bold;
 }
 
-.single-product .summary p {
+.single-product .woocommerce-product-details__short-description p {
     color: #4d1300;
     font-style: italic;
 }
 
 .single-product #product-70 .product_title {
+    color: green;
     font-family: Georgia, serif;
     font-size: 2em;
-}
+}*/
 
 /**
- * Zadanie 4 - Jak zmienić widok zamówienia z dwóch na jedną kolumnę
+ * Task 4 - Change checkout to one column
  *
  */
-.woocommerce-checkout .col2-set,
+/*.woocommerce-checkout .col2-set,
 .woocommerce-checkout #order_review,
 .woocommerce-checkout #order_review_heading {
     float: none;
     margin-right: 0;
     width: 100%;
-}
+}*/

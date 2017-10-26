@@ -32,13 +32,15 @@ wc_print_notices();
 
 <?php
 /**
- * Zadanie 1 - Jak dodać bestsellery na stronę pustego koszyka
+ * Task 1 - Add bestsellers to empty cart page
  *
  */
 ?>
-<h3>Nasze Bestsellery</h3>
+<?php /* UNCOMMENT
+<h3>Bestsellers</h3>
 
 <?php echo do_shortcode( '[best_selling_products per_page="3" columns="3"]' ); ?>
+ */ ?>
 
 <?php if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 	<p class="return-to-shop">

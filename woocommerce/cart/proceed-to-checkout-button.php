@@ -25,10 +25,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php
 /**
- * Zadanie 2 - Jak zmienić treść przycisku "do kasy"
+ * Task 2 - Change „proceed to checkout” button text
  *
  */
 ?>
 <a href="<?php echo esc_url( wc_get_checkout_url() ) ;?>" class="checkout-button button alt wc-forward">
-	Krok 2 - Podaj dane
+	<?php esc_html_e( 'Proceed to checkout', 'woocommerce' ); ?>
+	<?php /* UNCOMMENT
+	Step 2 - Fill in Your details
+	 */ ?>
 </a>

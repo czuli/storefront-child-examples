@@ -29,16 +29,18 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php
 /**
- * Zadanie 4 - Jak dodać kolejne kroki do maila klienta
+ * Task 4 - Add next steps to customer email
  *
  */
 ?>
-<h2>Co dalej?</h2>
+<?php /* UNCOMMENT
+<h2>Next steps</h2>
 
 <ul>
-    <li><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ); ?>">Poczytaj nasz blog</a></li>
-    <li><a href="<?php echo get_permalink( get_page_by_path( 'sklep' ) ); ?>">Przejdź do sklepu</a></li>
+    <li><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ); ?>">Read our blog</a></li>
+    <li><a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>">Return to shop</a></li>
 </ul>
+*/ ?>
 
 <?php
 

@@ -23,9 +23,9 @@ function sf_child_theme_dequeue_style() {
  * Note: DO NOT! alter or remove the code above this text and only add your custom PHP functions below this text.
  */
 
-//add_filter( 'woocommerce_catalog_orderby', 'wpdesk_woocommerce_catalog_orderby', 20 );
+// add_filter( 'woocommerce_catalog_orderby', 'wpdesk_woocommerce_catalog_orderby', 20 );
 /**
- * Zadanie 1 - Usunięcie opcji sortowania
+ * Task 1 - Remove product sorting
  *
  */
 function wpdesk_woocommerce_catalog_orderby( $orderby ) {
@@ -39,63 +39,63 @@ function wpdesk_woocommerce_catalog_orderby( $orderby ) {
 
 
 /**
- * Zadanie 2 - Zmiana wyświetlanej liczby produktów w sklepie na 6
+ * Task 2 - Change number of displayed products
  *
  */
-//add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 6;' ), 20 );
+// add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 6;' ), 20 );
 
 
 /**
- * Zadanie 3 - Usunięcie pokrewnych produktów na stronie produktu
+ * Task 3 - Remove related products on single product page
  *
  */
-//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+// remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 
-//add_action( 'woocommerce_after_single_product_summary', 'wpdesk_bestsellers', 20 );
+// add_action( 'woocommerce_after_single_product_summary', 'wpdesk_bestsellers', 20 );
 /**
- * Zadanie 4 - Dodanie bestsellerów w miejsce pokrewnych produktów
+ * Task 4 - Replace related products with bestsellers
  *
  */
 function wpdesk_bestsellers() {
-    echo '<h3>Nasze Bestsellery</h3>';
+    echo '<h3>Bestsellers</h3>';
 
     echo do_shortcode( '[best_selling_products per_page="3" columns="3"]' );
 }
 
 
 /**
- * Zadanie 5 - Zmiana kolejności elementów na stronie produktu
+ * Task 5 - Change order of elements on the product page
  *
  */
-/*remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );         // Nazwa
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );       // Ocena
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );        // Cena
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );      // Krótki opis
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );  // Dodaj do koszyka
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );         // SKU, Kategorie, Tagi
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );         // Title
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );       // Rating
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );        // Price
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );      // Short description
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );  // Add to cart
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );         // SKU, Categories, Tags
 
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 30 );           // Nazwa
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 25 );          // Ocena
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );           // Cena
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 15 );         // Krótki opis
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 10 );     // Dodaj do koszyka
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 5 );             // SKU, Kategorie, Tagi */
+// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 30 );           // Title
+// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 25 );          // Rating
+// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );           // Price
+// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 15 );         // Short description
+// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 10 );     // Add to cart
+// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 5 );             // SKU, Categories, Tags
 
 
-//add_action( 'woocommerce_thankyou', 'wpdesk_next_steps' );
-//add_action( 'woocommerce_email_order_details', 'wpdesk_next_steps' );
+// add_action( 'woocommerce_thankyou', 'wpdesk_next_steps' );
+// add_action( 'woocommerce_email_order_details', 'wpdesk_next_steps' );
 /**
- * Zadanie 6 - Dodanie kolejnych kroków do strony podziękowania i maili
+ * Task 6 - Add next steps to thank you page and emails
  *
  */
 function wpdesk_next_steps() {
 ?>
-    <h2>Co dalej?</h2>
+    <h2>Next steps (hook)</h2>
 
     <ul>
-        <li><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ); ?>">Poczytaj nasz blog</a></li>
-        <li><a href="<?php echo get_permalink( get_page_by_path( 'sklep' ) ); ?>">Przejdź do sklepu</a></li>
+        <li><a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ); ?>">Read our blog</a></li>
+        <li><a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>">Return to shop</a></li>
     </ul>
 <?php
 }
